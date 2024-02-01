@@ -11,9 +11,8 @@ const NavList = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   background-color: var(--color-grey-50);
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.2rem;
 
   @media (min-width: 961px) {
     display: none;
@@ -22,8 +21,8 @@ const NavList = styled.ul`
 
 const StyledNavLink = styled(NavLink)`
   & svg {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2rem;
+    height: 2rem;
     color: var(--color-brand-500);
     transition: all 0.3s;
   }
@@ -32,22 +31,22 @@ function MobileMenu() {
   return (
     <NavList>
       <li>
-        <StyledNavLink to="/">
+        <StyledNavLink to='/'>
           <HiOutlineHome />
         </StyledNavLink>
       </li>
       <li>
-        <StyledNavLink to="/catalog">
+        <StyledNavLink to='/catalog'>
           <HiOutlineSquares2X2 />
         </StyledNavLink>
       </li>
       <li>
-        <StyledNavLink to="/cart">
+        <StyledNavLink to='/cart'>
           <HiOutlineShoppingCart />
         </StyledNavLink>
       </li>
       <li>
-        <StyledNavLink to="/">
+        <StyledNavLink to='/'>
           <HiOutlineCog6Tooth />
         </StyledNavLink>
       </li>

@@ -51,8 +51,15 @@ export const GlobalStyles = createGlobalStyle`
     --border-radius-md: 7px;
     --border-radius-lg: 9px;
   }
+  * {
+    box-sizing: border-box;
+  }
+  html {
+  font-size: 62.5%;
+}
 
   body {
+    margin: 0;
   font-family: 'Roboto', sans-serif;
   color: var(--color-grey-700);
 
@@ -60,6 +67,8 @@ export const GlobalStyles = createGlobalStyle`
   min-height: 100vh;
   line-height: 1.5;
   font-size: 1.6rem;
+
+  overflow-x: hidden;
   }
 
   button {
@@ -68,5 +77,9 @@ export const GlobalStyles = createGlobalStyle`
   }
   ul {
     list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
   }
 `;
