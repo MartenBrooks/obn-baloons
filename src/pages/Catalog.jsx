@@ -1,5 +1,11 @@
+import ItemsList from '../features/catalog/ItemsList';
+
 function Catalog() {
-  return <div>Catalog</div>;
+  return (
+    <div>
+      <ItemsList />
+    </div>
+  );
 }
 
 export default Catalog;

@@ -4,10 +4,11 @@ import AppLayout from './ui/AppLayout';
 import Homepage from './pages/Homepage';
 import Cart from './pages/Cart';
 import Catalog from './pages/Catalog';
+import ItemsProvider from './contexts/ItemsContext';
 
 function App() {
   return (
-    <>
+    <ItemsProvider>
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
@@ -35,7 +36,7 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
-    </>
+    </ItemsProvider>
   );
 }
 

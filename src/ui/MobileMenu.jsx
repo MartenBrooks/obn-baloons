@@ -13,10 +13,6 @@ const NavList = styled.ul`
   align-items: center;
   background-color: var(--color-grey-50);
   padding: 0.5rem 1.2rem;
-
-  @media (min-width: 961px) {
-    display: none;
-  }
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -31,22 +27,22 @@ function MobileMenu() {
   return (
     <NavList>
       <li>
-        <StyledNavLink to='/'>
+        <StyledNavLink to="/">
           <HiOutlineHome />
         </StyledNavLink>
       </li>
       <li>
-        <StyledNavLink to='/catalog'>
+        <StyledNavLink to="/catalog">
           <HiOutlineSquares2X2 />
         </StyledNavLink>
       </li>
       <li>
-        <StyledNavLink to='/cart'>
+        <StyledNavLink to="/cart">
           <HiOutlineShoppingCart />
         </StyledNavLink>
       </li>
       <li>
-        <StyledNavLink to='/'>
+        <StyledNavLink to="/">
           <HiOutlineCog6Tooth />
         </StyledNavLink>
       </li>
