@@ -8,7 +8,7 @@ const sizes = {
       padding: 0.4rem 0.8rem;
     }
 
-    font-weight: 500;
+    font-weight: 400;
   `,
   medium: css`
     font-size: 1.4rem;
@@ -26,6 +26,10 @@ const variations = {
   primary: css`
     background-color: var(--color-brand-600);
     color: var(--color-grey-0);
+  `,
+  rounded: css`
+    background-color: var(--color-grey-0);
+    border: 1px solid var(--color-brand-200);
   `,
 };
 export const Button = styled.button`

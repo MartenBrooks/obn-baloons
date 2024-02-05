@@ -1,44 +1,38 @@
 import styled from 'styled-components';
-import { convertCurrency } from '../../services/convertCurrency';
+import Price from '../../ui/Price';
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-
-  padding: 0.5rem 0.5rem;
-`;
-
-const Price = styled.div`
-  display: flex;
   justify-content: space-between;
-  font-size: 0.9rem;
-  font-weight: 500;
-
-  & span {
-    color: var(--color-grey-500);
-    font-size: 0.8rem;
-    text-decoration: line-through;
-  }
+  align-items: center;
 `;
 
-const Name = styled.div`
-  font-size: 0.8rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+const Image = styled.img`
+  border-radius: 5px;
 `;
+
+const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem 1.2rem;
+`;
+
 function ItemDescription({ item }) {
+  const { image, name, price, discountPrice } = item;
   return (
     <Container>
-      <Price>
-        {item.discountPrice
-          ? convertCurrency(item.discountPrice)
-          : convertCurrency(item.price)}
-        <span>{item.discountPrice && convertCurrency(item.price)}</span>
-      </Price>
-      <Name>{item.name}</Name>
+      <div>
+        <Image src={image} />
+      </div>
+      <Description>
+        <p>{name}</p>
+        <Price
+          price={price}
+          discountPrice={discountPrice}
+        />
+      </Description>
     </Container>
   );
 }

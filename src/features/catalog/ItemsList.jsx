@@ -14,8 +14,11 @@ function ItemsList() {
 
   return (
     <StyledItemsList>
-      {items.map((item, i) => (
-        <Item item={item} key={i} />
+      {items.map((item) => (
+        <Item
+          item={item}
+          key={item.id}
+        />
       ))}
     </StyledItemsList>
   );
